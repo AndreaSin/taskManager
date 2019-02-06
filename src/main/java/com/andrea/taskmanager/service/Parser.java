@@ -34,7 +34,7 @@ public class Parser {
             int a=8, b=9,c=10,d=11;
             for (int i = 8; d <= (arrayString.length); i++) { 
                 PortObj connectionObj = new PortObj();
-                connectionObj.setProto(arrayString[a]); 
+                connectionObj.setProt(arrayString[a]); 
                 a=a+4;
                 connectionObj.setLocalAddress(arrayString[b]); 
                 b=b+4;
