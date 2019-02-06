@@ -28,7 +28,7 @@ public class ProcessController {
     @Autowired
     PortsStatusInterface connection;
      
- //Jackson traduce la mia lista di oggetti in un JSON   
+    //Jackson traduce la mia lista di oggetti in un JSON   
     @GetMapping("/listProcRest")
     public List listProcRest() {
         List<ProcessObj> procList = requestProcess.getProcessList();
