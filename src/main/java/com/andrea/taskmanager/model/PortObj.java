@@ -1,13 +1,13 @@
 package com.andrea.taskmanager.model;
 
 public class PortObj {
-    String proto;
+    String prot;
     String localAddress;
     String extAddress;
     String status;
 
-    public PortObj(String proto, String localAddress, String extAddress, String status) {
-        this.proto = proto;
+    public PortObj(String prot, String localAddress, String extAddress, String status) {
+        this.prot = prot;
         this.localAddress = localAddress;
         this.extAddress = extAddress;
         this.status = status;
@@ -16,12 +16,12 @@ public class PortObj {
     public PortObj() {
     }
 
-    public String getProto() {
-        return proto;
+    public String getProt() {
+        return prot;
     }
 
-    public void setProto(String proto) {
-        this.proto = proto;
+    public void setProt(String prot) {
+        this.prot = prot;
     }
 
     public String getLocalAddress() {
