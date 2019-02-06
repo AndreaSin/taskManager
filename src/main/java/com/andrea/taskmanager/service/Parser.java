@@ -31,18 +31,13 @@ public class Parser {
             netStatResult = netStatResult.trim().replaceAll(" +", " ");
             String[] arrayString = netStatResult.split(" ");
             List<PortObj> connectionList = new ArrayList();
-            int a=8, b=9,c=10,d=11;
-            for (int i = 8; d <= (arrayString.length); i++) { 
+            for (int position=8; position+3 <= (arrayString.length); position++) {
                 PortObj connectionObj = new PortObj();
-                connectionObj.setProt(arrayString[a]); 
-                a=a+4;
-                connectionObj.setLocalAddress(arrayString[b]); 
-                b=b+4;
-                connectionObj.setExtAddress(arrayString[c]); 
-                c=c+4;
-                connectionObj.setStatus(arrayString[d]); 
-                d=d+4;
-                connectionList.add(connectionObj);
+                connectionObj.setProt(arrayString[position]); 
+                connectionObj.setLocalAddress(arrayString[++position]); 
+                connectionObj.setExtAddress(arrayString[++position]); 
+                connectionObj.setStatus(arrayString[++position]); 
+                connectionList.add(connectionObj);                      
             }
             return connectionList;
         } catch (IOException ex) {
