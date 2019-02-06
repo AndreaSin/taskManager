@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import java.io.IOException;
 import java.util.List;
 import com.andrea.taskmanager.service.ProcessRequestInterface;
 import com.andrea.taskmanager.service.PortsStatusInterface;
 
+//Il crossOrigin è necessario per permettere al frontend di consumare il servizio
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/process")
@@ -27,7 +27,8 @@ public class ProcessController {
         
     @Autowired
     PortsStatusInterface connection;
-       
+     
+ //Jackson traduce la mia lista di oggetti in un JSON   
     @GetMapping("/listProcRest")
     public List listProcRest() {
         List<ProcessObj> procList = requestProcess.getProcessList();
