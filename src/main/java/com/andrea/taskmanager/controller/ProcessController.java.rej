@@ -1,0 +1,10 @@
+diff a/src/main/java/com/andrea/taskmanager/controller/ProcessController.java b/src/main/java/com/andrea/taskmanager/controller/ProcessController.java	(rejected hunks)
+@@ -27,7 +27,7 @@
+         
+     @Autowired
+     PortsStatusInterface connection;
+-     
++     //master
+     //Jackson traduce la mia lista di oggetti in un JSON   
+     @GetMapping("/listProcRest")
+     public List listProcRest() {
