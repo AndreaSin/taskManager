@@ -13,7 +13,7 @@ import java.util.List;
 import com.andrea.taskmanager.service.ProcessRequestInterface;
 import com.andrea.taskmanager.service.PortsStatusInterface;
 
-//Il crossOrigin è necessario per permettere al frontend di consumare il servizio
+//Il crossOrigin è necessario per permettere al frontend di consumare il servizi
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/process")
